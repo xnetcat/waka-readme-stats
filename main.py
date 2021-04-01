@@ -342,7 +342,9 @@ def get_waka_time_stats():
                 edit_list = no_activity
             else:
                 edit_list = make_list(data['data']['editors'])
+            stats += "\n"
             stats += render_stats(logo='🔥 ', heading=translate['Editors'], data=edit_list)
+            stats += "\n"
 
         if showProjects.lower() in truthy:
             empty = False
@@ -352,7 +354,9 @@ def get_waka_time_stats():
                 # Re-order the project list by percentage
                 data['data']['projects'] = sorted(data['data']['projects'], key=lambda x: x["percent"], reverse=True)
                 project_list = make_list(data['data']['projects'])
+            stats += "\n"
             stats += render_stats(logo='🐱‍‍💻  ', heading=translate['Projects'], data=project_list)
+            stats += "\n"
 
         if showOs.lower() in truthy:
             empty = False
