@@ -344,7 +344,6 @@ def get_waka_time_stats():
                 edit_list = no_activity
             else:
                 edit_list = make_list(data['data']['editors'])
-            stats += "\n"
             stats += render_stats(logo='🔥 ', heading=translate['Editors'], data=edit_list)
             stats += "\n"
 
