@@ -12,6 +12,11 @@ inputs:
     description: 'Your Wakatime API Key'
     required: true
 
+  RENDER_HTML:
+    description: 'Render Readme as html'
+    required: false
+    default: "False"
+
   SHOW_OS:
     required: false
     description: 'Show the list of OS Worked on In dev metrics'
