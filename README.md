@@ -119,6 +119,7 @@ jobs:
 
 `LOCALE`  This Flag can be used to show stats in your language default is english uses Locale [Short Hand](https://saimana.com/list-of-country-locale-code/) to be passed in the flag variable example of the final result can be found [here](https://github.com/anmol098/anmol098/blob/master/Readme-fr.md)
 
+`COMMIT_BY_ME`        flag can be set to `True` to commit the code using your name and email
 
 `SHOW_LINES_OF_CODE`       flag can be set to `True` to show the Lines of code writen till date
 
@@ -259,6 +260,7 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
 
 1. [Anmol Pratap Singh](https://github.com/anmol098): Maintainer
 2. [Prabhat Singh](https://github.com/prabhatdev): For code timeline graph [#18](https://github.com/anmol098/waka-readme-stats/pull/18)
+2. [Aravind V. Nair](https://github.com/aravindvnair99): For Pull Request [#188](https://github.com/anmol098/waka-readme-stats/pull/188) And Other improvements
 3. [Hedy Li](https://github.com/hedythedev): For Pull Request [#34](https://github.com/anmol098/waka-readme-stats/pull/34) and [#23](https://github.com/anmol098/waka-readme-stats/pull/23)
 4. [Pedro Torres](https://github.com/Corfucinas): For Pull Request [#29](https://github.com/anmol098/waka-readme-stats/pull/29)
 5. [Aaron Meese](https://github.com/ajmeese7): For Pull Request [#45](https://github.com/anmol098/waka-readme-stats/pull/45)
@@ -368,6 +370,12 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
   - [Aadit Kamat](https://github.com/aaditkamat)
     
   - [Subhalingam D](https://github.com/subhalingamd)
+  
+  - [Adil Akhmetov](https://github.com/weeebdev)
+  
+  - [Isaac Maldonado](https://github.com/einjunge99)
+  
+  - [Syed Faateh Sultan Kazmi](https://github.com/faatehsultan)
 
   
 

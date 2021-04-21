@@ -42,12 +42,14 @@ showLocChart = os.getenv('INPUT_SHOW_LOC_CHART')
 show_profile_view = os.getenv('INPUT_SHOW_PROFILE_VIEWS')
 show_short_info = os.getenv('INPUT_SHOW_SHORT_INFO')
 locale = os.getenv('INPUT_LOCALE')
+commit_by_me = os.getenv('INPUT_COMMIT_BY_ME')
 show_waka_stats = 'y'
 # The GraphQL query to get commit data.
 userInfoQuery = """
 {
     viewer {
       login
+      email
       id
     }
   }
@@ -256,7 +258,8 @@ def generate_commit_list(tz):
                 if weekday == "Sunday":
                     Sunday += 1
         except Exception as ex:
-            print("Please Ignore this exception " + str(ex))
+            if str(ex) != "'NoneType' object is not subscriptable":
+                print("Exception occurred " + str(ex))
 
     sumAll = morning + daytime + evening + night
     sum_week = Sunday + Monday + Tuesday + Friday + Saturday + Wednesday + Thursday
@@ -501,7 +504,7 @@ def get_stats(github):
 
 # def star_me():
     # requests.put("https://api.github.com/user/starred/anmol098/waka-readme-stats", headers=headers)
-    
+
 
 def decode_readme(data: str):
     '''Decode the contents of old readme'''
@@ -523,8 +526,9 @@ if __name__ == '__main__':
         headers = {"Authorization": "Bearer " + ghtoken}
         user_data = run_query(userInfoQuery)  # Execute the query
         username = user_data["data"]["viewer"]["login"]
+        email = user_data["data"]["viewer"]["email"]
         id = user_data["data"]["viewer"]["id"]
-        print(username)
+        print("Username " + username)
         repo = g.get_repo(f"{username}/{username}")
         contents = repo.get_readme()
         try:
@@ -538,7 +542,10 @@ if __name__ == '__main__':
         # star_me()
         rdmd = decode_readme(contents.content)
         new_readme = generate_new_readme(stats=waka_stats, readme=rdmd)
-        committer = InputGitAuthor('readme-bot', '41898282+github-actions[bot]@users.noreply.github.com')
+        if commit_by_me.lower() in truthy:
+            committer = InputGitAuthor(username, email)
+        else:
+            committer = InputGitAuthor('readme-bot', '41898282+github-actions[bot]@users.noreply.github.com')
         if new_readme != rdmd:
             try:
                 repo.update_file(path=contents.path, message='Updated with Dev Metrics',
