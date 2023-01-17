@@ -16,6 +16,10 @@ inputs:
     description: 'Render Readme as html'
     required: false
     default: "False"
+  PUSH_BRANCH_NAME:
+    required: false
+    description: "The branch to update the readme in"
+    default: "master"
 
   SHOW_OS:
     required: false
@@ -86,6 +90,46 @@ inputs:
     required: false
     description: "Git commit with your own name and email"
     default: "False"
+
+  IGNORED_REPOS:
+    required: false
+    description: "Repos you don't want to be counted"
+    default: ""
+  
+  COMMIT_MESSAGE:
+    required: false
+    description: "Git commit message"
+    default: "Updated with Dev Metrics"
+
+  COMMIT_USERNAME:
+    required: false
+    description: "Git commit custom username"
+    default: ""
+  
+  COMMIT_EMAIL:
+    required: false
+    description: "Git commit custom email"
+    default: ""
+
+  SHOW_UPDATED_DATE:
+    required: false
+    description: "Show updated date"
+    default: "True"
+
+  UPDATED_DATE_FORMAT:
+    required: false
+    description: "Updated date format"
+    default: "%d/%m/%Y %H:%M:%S"
+
+  SHOW_TOTAL_CODE_TIME:
+    required: false
+    description: "Show Total Time you have coded"
+    default: "True"
+
+  SYMBOL_VERSION:
+    required: false
+    description: "Version of the symbol block and empty of the progress bar"
+    default: "1"
 
 runs:
   using: 'docker'

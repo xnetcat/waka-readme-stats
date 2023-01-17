@@ -5,9 +5,9 @@
 ![Project Preview](https://user-images.githubusercontent.com/25841814/79395484-5081ae80-7fac-11ea-9e27-ac91472e31dd.png)
 
 <p align="center">
-  
+
   ![Project Preview](https://user-images.githubusercontent.com/15426564/88030180-8e1c4780-cb58-11ea-8a8b-b3576dd73652.png)
-  
+
   <h3 align="center">📌✨Awesome Readme Stats</h3>
 </p>
 
@@ -121,9 +121,23 @@ jobs:
 
 `COMMIT_BY_ME`        flag can be set to `True` to commit the code using your name and email
 
+`COMMIT_MESSAGE`        flag can be set to message commit, default is "Updated with Dev Metrics"
+
+`COMMIT_USERNAME`        flag can be set to username to commit the code, default is "readme-bot"
+
+`COMMIT_EMAIL`        flag can be set to email to commit the code, default is "41898282+github-actions[bot]@users.noreply.github.com"
+
+`SHOW_UPDATED_DATE`        flag can be set to `True` to show updated date in end of paragraph
+
+`UPDATED_DATE_FORMAT`        flag can be set to put updated date into a format, default is `"%d/%m/%Y %H:%M:%S"`
+
 `SHOW_LINES_OF_CODE`       flag can be set to `True` to show the Lines of code writen till date
 
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I've%20written-1.3%20million%20Lines%20of%20code-blue)
+
+`SHOW_TOTAL_CODE_TIME`       flag can be set to `False` to hide *Code Time*
+
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C438%20hrs%2054%20mins-blue)
 
 `SHOW_PROFILE_VIEWS`       flag can be set to `False` to hide the Profile views
 
@@ -233,6 +247,15 @@ CSS          2 repos        █░░░░░░░░░░░░░░░░�
 
 `SHOW_LOC_CHART`  flag can be set to `False` to hide the Lines of code written in different quarters of different year
 
+`IGNORED_REPOS`  flag can be set to `"waka-readme-stats, my-first-repo"` (just an example) to ignore some repos you don’t want to be counted
+
+`SYMBOL_VERSION` flag can be set symbol for progress bar (default: `1`)
+| Version | Done block | Empty block |
+|-------- | ---------- | ----------- |
+|    1    |      █     |       ░     |
+|    2    |      ⣿     |       ⣀     |
+|    3    |      ⬛    |       ⬜    |
+
 **Timeline**
 
 ![Chart not found](https://raw.githubusercontent.com/anmol098/anmol098/master/charts/bar_graph.png) 
@@ -260,13 +283,13 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
 
 1. [Anmol Pratap Singh](https://github.com/anmol098): Maintainer
 2. [Prabhat Singh](https://github.com/prabhatdev): For code timeline graph [#18](https://github.com/anmol098/waka-readme-stats/pull/18)
-2. [Aravind V. Nair](https://github.com/aravindvnair99): For Pull Request [#188](https://github.com/anmol098/waka-readme-stats/pull/188) And Other improvements
+2. [Aravind V. Nair](https://github.com/aravindvnair99): Maintainer and For Pull Request [#188](https://github.com/anmol098/waka-readme-stats/pull/188) And Other improvements
 3. [Hedy Li](https://github.com/hedythedev): For Pull Request [#34](https://github.com/anmol098/waka-readme-stats/pull/34) and [#23](https://github.com/anmol098/waka-readme-stats/pull/23)
 4. [Pedro Torres](https://github.com/Corfucinas): For Pull Request [#29](https://github.com/anmol098/waka-readme-stats/pull/29)
 5. [Aaron Meese](https://github.com/ajmeese7): For Pull Request [#45](https://github.com/anmol098/waka-readme-stats/pull/45)
 6. [Arnav Jindal](https://github.com/Daggy1234): For Pull Request [#48](https://github.com/anmol098/waka-readme-stats/pull/48)
 7. [Daniel Rowe](https://github.com/DanRowe): For Pull Request [#57](https://github.com/anmol098/waka-readme-stats/pull/57)
-8. [Ss5h](https://github.com/tlatkdgus1): For adding support for natural sentence writing for translatio [#136](https://github.com/anmol098/waka-readme-stats/pull/136)
+8. [Ss5h](https://github.com/tlatkdgus1): For adding support for natural sentence writing for translation [#136](https://github.com/anmol098/waka-readme-stats/pull/136)
 
 <details>
 <summary>Special mention for those who are currently making their profile readme more awesome :smile: :tada:</summary>
@@ -349,8 +372,6 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
   
   - [> EdgyCoder ✌](https://github.com/edgycoder)
   
-  - [> EdgyCoder ✌](https://github.com/edgycoder)
-  
   - [Korel Kashri](https://github.com/korelkashri)
   
   - [Gustavo Barbosa](https://github.com/gusbdev)
@@ -377,6 +398,22 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
   
   - [Syed Faateh Sultan Kazmi](https://github.com/faatehsultan)
 
+  - [Shreyam Maity](https://github.com/ShreyamMaity)
+
+  - [Sufiane](https://github.com/sufiane)
+
+  - [Muhammad Bilal](https://github.com/BilalJaved15)
+
+  - [Waterdev](https://github.com/UnrealValentin)
+  
+  - [Aditya Prasad S](https://github.com/adityaprasad502)
+  
+  - [C. Vinicius Santos](https://github.com/c-viniciussantos)
+  
+  - [James Tufarelli](https://github.com/Minituff)
+  
+  - [Muhammad Bilal](https://github.com/BilalJaved15)
+
   
 
 </details>
@@ -392,3 +429,8 @@ Made with :heart: and Python 🐍.
 > [athul/waka-readme](https://github.com/athul/waka-readme)
 
 ### This project need a **star** ⭐ from you ♥.
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/anmol098/waka-readme-stats.svg)](https://starchart.cc/anmol098/waka-readme-stats)
