@@ -494,13 +494,9 @@ def get_short_info(github):
     else:
         string += render_list_item(logo='🚫 ', description=translate["Opted to Hire"])
 
-    string += '> 📜 '
-    string += translate['public repositories'] % public_repo + " " + '\n > \n' if public_repo != 1 else translate[
-                                                                                                            'public repository'] % public_repo + " " + '\n > \n'
-    string += '> 🔑 '
-    string += translate['private repositories'] % private_repo + " " + ' \n > \n' if private_repo != 1 else translate[
-                                                                                                                'private repository'] % private_repo + " " + '\n > \n'
-
+    description = translate['public repositories'] % public_repo if public_repo != 1 else translate['public repository'] % private_repo
+    string += render_list_item(logo='📜 ', description=description)
+    
     description = translate['private repositories'] % private_repo if private_repo != 1 else translate['private repository'] % private_repo
     string += render_list_item(logo='🔑 ', description=description)
     return string + '</ul>'
@@ -522,19 +518,6 @@ def get_stats(github):
     if show_loc.lower() in truthy or showLocChart.lower() in truthy:
         # This condition is written to calculate the lines of code because it is heavy process soo needs to be calculate once this will reduce the execution time
         yearly_data = get_yearly_data()
-
-    if show_total_code_time.lower() in truthy:
-        request = requests.get(
-            f"https://wakatime.com/api/v1/users/current/all_time_since_today?api_key={waka_key}")
-        if request.status_code == 401:
-            print("Error With WAKA time API returned " + str(request.status_code) + " Response " + str(request.json()))
-        elif "text" not in request.json()["data"]:
-            print("User stats are calculating. Try again later.")
-        else:
-            data = request.json()
-            stats += '![Code Time](http://img.shields.io/badge/' + quote(
-                str("Code Time")) + '-' + quote(str(
-                data['data']['text'])) + '-blue)\n\n'
 
     if show_profile_view.lower() in truthy:
         data = run_v3_api(get_profile_view.substitute(owner=username, repo=username))
